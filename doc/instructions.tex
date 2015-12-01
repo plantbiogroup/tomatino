@@ -1,0 +1,106 @@
+\documentclass{article} \usepackage{multicol}
+\setlength{\columnsep}{20pt}
+\begin{document}
+
+\section{The chassis}
+The task of the \textit{chassis} is to hold the components in place.
+It also gives a place to organize the different pieces of your
+project.
+
+\begin{multicols}{2}
+
+  \subsection{Materials}
+  \begin{itemize}
+  \item A sheet of Plexiglass at least 300x50 cm about 6mm thick.
+  \item 8 standoffs 4-40
+  \item 8 sunken flath head 4-40 screws to fasten the standoffs on to
+    the Plexiglass.
+  \item 8 screws to fasten the PC boards to the standoffs.
+  \item 16 non conductive washers. Nylon washers are good.
+  \end{itemize}
+
+  \subsection{Tools}
+  \begin{itemize}
+  \item A drill, \#30, or \#32, or 3/32 inch will do.
+  \item A counter sink
+  \end{itemize}
+
+  \subsection{Procedure}
+  \begin{enumerate}
+  \item Mark the center of the holes of the PC boards on the
+    Plexiglass base with a punch
+
+  \item Drill the holes.
+
+  \item Countersink the holes on the bottom.  This gives you a nice
+    flush bottom surface.
+  \end{enumerate}
+
+  \subsection{Notes}
+  Depending on the type of boards you get, your layout will vary.  If
+  you make a mistake, Plexiglass is quite forgiving, and you can drill
+  until you get it right.
+
+  A nice substitute for standoffs is an ordinary screw with nuts on
+  both sides of the PC board.  You can also make hillbilly standoffs
+  by cutting straws or a vinyl hose into bits and use them as
+  standoffs.
+\end{multicols}
+
+\section{The Relay Adaptor Board}
+The \textit{Realy Adaptor Board} is holds the filters for the relay.
+The relay bank can be attached directly to your Arduino, but chances
+are that the electric noise of the relay will feed back to the Arduino
+and mess with it.
+
+In the firs iteration of the \textit{TomatoPi} we hooked the relay
+bank directly up to the GPIO pins of a Raspberry Pi.  This setup
+worked initially, but after a while we got intermittent crashes on the
+Pi.
+
+A Relay Adaptor Board can save you many debugging headaches.
+
+The circuit is a simple pull-down resistor with a bypass capacitor in
+parallel, repeated once for each input signal.  A larger capacitor is
+hooked up from Vcc to ground in order to smooth any spikes, and
+provide a bit of extra juice to the relays.
+
+\begin{multicols}{2}
+  \subsection{Tools}
+  \begin{itemize}
+  \item Soldering iron.  Buy yourself a nice one with hand protection.
+  \item Solder.
+  \item Small wire cutter
+  \item Volt meter for testing the circuit.
+  \end{itemize}
+
+  \subsection{Materials}
+  \begin{itemize}
+  \item 8 x 1k resistors.  I used 1/16W 5%
+  \item 8 x 10 nF Ceramic capacitors.  Most any small capacitor will
+    do.
+  \item 1 x 100 uF Electroltic capacitor. Rated at least two times
+    higher than the feeding voltage.  I feed with 5v so I use a 10v
+    capacitor.  It is a good rule of thumb.
+  \item 2 x 10 pin stackable header.  You can use other headers, but
+    the stackable ones are handy for prototyping.
+  \item 1 x Double sided 70x50mm pre drilled proto-board (or larger)
+  \item 22 gauge hookup wire. Different colors for Vcc, signal and
+    ground.
+  \end{itemize}
+
+  \subsection{Procedure}
+  Lay out the board and solder it.... ;)
+
+  Test the connections with your volt meter.
+\end{multicols}
+
+
+\section{Realy Housing and Outlets}
+Note. You are explicitly forbidden to hook this up to the 110v power
+main unless you have proper authorization.  If you do that,
+\begin{multicols}{2}
+  \subsection{Foo}
+  bar baz.
+\end{multicols}
+\end{document}
